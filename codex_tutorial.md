@@ -1,220 +1,206 @@
-# 🚀 Codex 使用教程
-
-> 核心理念：  
-> 👉 用自然语言描述需求 → AI生成代码 → 验证 → 迭代优化  
-> 👉 先做“最小可运行版本”，再逐步增强功能  
-
 ---
 
-# 🧠 一、Codex是什么？
+# 🚀 Codex 简介
 
-Codex 是一个 AI 编程工具，本质属于：
+## 🧠 一、什么是 Codex
 
-- 🤖 “终端级 AI / 智能开发助手”
-- 🧾 输入自然语言 → 自动生成代码
-- ⚡ 适合快速开发原型（大创非常适合）
+**Codex 是由 OpenAI 推出的 AI 编程智能体（AI Coding Agent）**，
+可以通过自然语言直接完成软件开发任务。
 
----
+👉 简单理解：
 
-# ✍️ 二、核心使用方法（通用）
-
-## 1️⃣ 基本流程（必须掌握）
-
-需求描述 → Prompt设计 → AI生成代码 → 本地运行 → 修改优化
-
----
-
-## 2️⃣ 标准 Prompt 模板（直接复制用）
-
-我需要实现一个【功能名称】。
-
-需求描述：
-- 功能1：
-- 功能2：
-- 页面/交互逻辑：
-
-输入输出示例：
-输入：
-输出：
-
-技术栈：Python + Flask（或 React / Vue）
-
-约束要求：
-- 代码必须完整可运行
-- 注释清晰
-- 不要省略关键函数
-- 结构清晰
-
-请直接输出完整代码，并说明运行方法。
-
----
-
-## 3️⃣ 使用策略（非常关键）
-
-- ✅ 先生成最简版本
-- ❌ 不要一开始就做复杂系统
-- 🔁 多轮迭代优化
-
----
-
-# 🍎 三、Mac 版 Codex 教程
-
-## 1️⃣ 环境准备
-
-### 安装基础环境
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install node
-brew install python
-```
-
-### 安装 VS Code
-
-https://code.visualstudio.com/
-
-### 配置 Codex
-
-```bash
-pip install openai
-export OPENAI_API_KEY="你的key"
+```text
+你提需求，Codex 帮你写代码甚至完成整个功能
 ```
 
 ---
 
-## 2️⃣ 使用方式
+## ⚙️ 二、核心能力
 
-### 终端调用
+Codex 的能力远不止“写代码”，而是一个完整的“AI程序员”：
 
-```bash
-openai chat.completions.create \
-  -m gpt-4.1 \
-  -g user "帮我写一个Flask网站，实现用户登录功能"
-```
+### 🔹 1. 自动生成代码
 
-### VS Code 插件（推荐）
+* 根据自然语言生成 Python / JavaScript / Java 等代码
+* 支持前端、后端、算法等
 
-- GitHub Copilot
-- ChatGPT 插件
+👉 示例：
 
----
-
-## 3️⃣ 运行项目
-
-```bash
-pip install flask
-python app.py
-```
-
-访问：http://127.0.0.1:5000
-
----
-
-# 🪟 四、Windows 版 Codex 教程
-
-## 1️⃣ 环境准备
-
-### 安装 Python
-
-https://www.python.org/
-
-✔ 勾选 Add Python to PATH
-
-### 安装 Node.js
-
-https://nodejs.org/
-
-### 安装 VS Code
-
-https://code.visualstudio.com/
-
----
-
-## 2️⃣ 配置 Codex
-
-```powershell
-pip install openai
-setx OPENAI_API_KEY "你的key"
+```text
+帮我写一个学生管理系统（Flask）
 ```
 
 ---
 
-## 3️⃣ 使用方式
+### 🔹 2. 理解代码库
 
-```powershell
-openai chat.completions.create `
-  -m gpt-4.1 `
-  -g user "写一个学生管理系统，Python实现"
+* 能阅读整个项目结构
+* 分析模块关系和逻辑
+
+👉 示例：
+
+```text
+这个项目是做什么的？入口在哪？
 ```
 
 ---
 
-## 4️⃣ 运行项目
+### 🔹 3. 修复 Bug
 
-```powershell
-python app.py
+* 自动定位错误
+* 给出最小修改方案
+
+👉 示例：
+
+```text
+项目启动报错，请帮我修复
 ```
 
 ---
 
-# 🧩 五、Skill（技能）使用指南
+### 🔹 4. 自动完成开发任务
 
-## 常见 Skill
+* 写功能
+* 跑测试
+* 提 Pull Request
 
-### API
-
-帮我调用某某API，实现数据获取
-
-### Debug
-
-这段代码报错如下，请帮我定位问题并修复
-
-### 前端UI
-
-帮我用 React 写一个美观的页面，使用 Ant Design
-
-### 数据库
-
-帮我设计 MySQL 表结构，实现用户系统
+👉 官方描述：
+Codex 可以执行“编写功能、回答代码问题、修复错误并提出代码变更”等任务 ([OpenAI][1])
 
 ---
 
-# ⚠️ 六、常见问题
+### 🔹 5. 多任务并行
 
-## AI代码运行失败
+* 可以同时运行多个任务
+* 每个任务在独立环境中执行
 
-👉 提供完整报错 + 代码给AI
-
-## 功能混乱
-
-👉 Prompt太模糊，拆分需求
-
-## 看不懂代码
-
-👉 需要数据结构基础
+👉 大幅提升开发效率 ([OpenAI][2])
 
 ---
 
-# 🏁 七、团队协作建议
+## 🤖 三、Codex 的本质（非常重要）
 
-## 分工
+Codex ≠ 普通 AI
+它是：
 
-- 产品：写Prompt
-- 开发：用Codex生成代码
-- 测试：运行代码
-- 优化：Debug
-
-## 流程
-
-1. 明确需求
-2. 写Prompt
-3. AI生成最小版本
-4. 本地运行
-5. 逐步优化
+```text
+AI 编程工具 → AI 编程助手 → AI 编程代理（Agent）
+```
 
 ---
 
-# 🎯 总结
+### 📊 编程工具进化
 
-- Codex适合快速开发与原型验证
-- 复杂系统仍需人工设计
+| 阶段  | 工具      | 特点       |
+| --- | ------- | -------- |
+| 第一代 | Copilot | 自动补全     |
+| 第二代 | ChatGPT | 对话写代码    |
+| 第三代 | Codex   | 自动执行开发任务 |
+
+👉 Codex 的核心变化：
+
+```text
+从“辅助写代码” → “直接做开发”
+```
+
+---
+
+## 🧩 四、Codex 的工作方式
+
+Codex 的典型流程是：
+
+```text
+1. 用户输入需求（Prompt）
+2. Codex 理解任务
+3. 自动执行（写代码 / 修改项目）
+4. 返回结果或修改
+5. 用户验证并继续优化
+```
+
+---
+
+## 🔧 五、Codex 的使用形式
+
+Codex 主要有三种使用方式：
+
+### 1️⃣ Codex App（本地应用）
+
+* 类似开发工作台
+* 支持多个任务并行
+
+---
+
+### 2️⃣ IDE 插件（如 VS Code）
+
+* 直接在代码编辑器中使用
+* 边写边生成
+
+---
+
+### 3️⃣ CLI / API
+
+* 适合自动化或高级开发
+
+---
+
+## 🧠 六、Codex 与传统编程的区别
+
+| 维度   | 传统开发 | Codex |
+| ---- | ---- | ----- |
+| 写代码  | 手写   | AI生成  |
+| 开发流程 | 人主导  | AI协作  |
+| 速度   | 较慢   | 很快    |
+| 门槛   | 高    | 降低    |
+
+---
+
+## ⚠️ 七、Codex 的局限
+
+虽然很强，但也有明显限制：
+
+* ❌ 复杂系统设计仍需人工
+* ❌ 需要正确 Prompt 才能输出好结果
+* ❌ 不能完全替代程序员
+
+👉 本质：
+
+```text
+AI 放大能力，而不是替代能力
+```
+
+---
+
+## 🎯 八、总结（一句话版本）
+
+```text
+Codex 是一个可以“理解需求并自动完成开发任务”的 AI 编程代理
+```
+
+---
+
+## 🚀 九、给大创项目的意义
+
+Codex 能帮你：
+
+* ⚡ 快速做出项目原型
+* 🧩 自动生成模块代码
+* 🛠 辅助调试和优化
+* 📚 帮新成员理解项目
+
+👉 非常适合：
+
+```text
+大创 / 课程设计 / 创业项目
+```
+
+---
+
+# 🔥 最后一句话
+
+```text
+未来不会编程的人不会被淘汰  
+不会用 AI 编程的人会被淘汰
+```
+
+[1]: https://openai.com/zh-Hans-CN/index/introducing-codex/?utm_source=chatgpt.com "Codex 简介"
+[2]: https://openai.com/zh-Hans-CN/codex/?utm_source=chatgpt.com "Codex | OpenAI 打造的AI 编码助手"
