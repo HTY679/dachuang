@@ -1,3 +1,4 @@
+
 ---
 
 # 🚀 Codex 简介
@@ -201,6 +202,8 @@ Codex 能帮你：
 未来不会编程的人不会被淘汰  
 不会用 AI 编程的人会被淘汰
 ```
+
+---
 
 [1]: https://openai.com/zh-Hans-CN/index/introducing-codex/?utm_source=chatgpt.com "Codex 简介"
 [2]: https://openai.com/zh-Hans-CN/codex/?utm_source=chatgpt.com "Codex | OpenAI 打造的AI 编码助手"
