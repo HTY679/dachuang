@@ -457,29 +457,13 @@ Codex 作为 Agent → 负责执行
 
 ---
 
-## 六、你们大创小组可以怎么落地
-
-你们可以这样分工。
-
-有人专门负责写高质量 Prompt。
-有人负责让 Agent 执行任务。
-有人负责整理常用 Skill。
-有人负责审查结果、测试和合并代码。
-
-这样用 Codex 才像“项目协作”，而不是“大家各自和 AI 随便聊”。
-
----
-
-## 七、最后给你一个最实用的记法
+## 六、最后给你一个最实用的记法
 
 你可以直接记这三句：
 
 **Prompt**：我该怎么把需求说清楚。
 **Agent**：AI 会不会真正去执行任务。
 **Skill**：AI 是不是带着一套成熟方法在做这件事。
-
-如果你要，我下一步可以直接帮你继续做两种内容里的一个：
-第一种是把这段整理成**适合放进 md 教程的正式版文本**；第二种是我直接给你写一套**“旅游网站项目专用 Prompt 模板 + 推荐 Skill 清单”**。
 
 [1]: https://developers.openai.com/codex/learn/best-practices?utm_source=chatgpt.com "Best practices – Codex"
 [2]: https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan?utm_source=chatgpt.com "Using Codex with your ChatGPT plan"
